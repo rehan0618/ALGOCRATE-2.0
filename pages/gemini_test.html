@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemini API Test</title>
+
+<style>
+  body {
+    background: #0f0f0f;
+    color: white;
+    font-family: system-ui, Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #box {
+    width: 380px;
+    background: #111;
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  #messages {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .user { color: #9f7cff; margin: 6px 0; }
+  .ai { color: #ddd; margin: 6px 0; }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+</style>
+</head>
+
+<body>
+
+<div id="box">
+  <div id="messages">
+    <div class="ai">Gemini Test Ready. Type anything.</div>
+  </div>
+  <input id="input" placeholder="Type here and press Enter..." />
+</div>
+
+<script>
+const API_KEY = "AIzaSyAYHbu90XF5MdOjH74_yd8PFutHg4UijUo";
+const input = document.getElementById("input");
+const messages = document.getElementById("messages");
+
+input.addEventListener("keydown", async (e) => {
+  if (e.key !== "Enter") return;
+
+  const text = input.value.trim();
+  if (!text) return;
+
+  messages.innerHTML += `<div class="user">You: ${text}</div>`;
+  input.value = "";
+  messages.scrollTop = messages.scrollHeight;
+
+  try {
+    const res = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=AIzaSyAYHbu90XF5MdOjH74_yd8PFutHg4UijUo" + API_KEY,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [{ text }]
+            }
+          ]
+        })
+      }
+    );
+
+    const data = await res.json();
+    console.log(data);
+
+    const reply =
+      data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+      "NO RESPONSE FROM GEMINI";
+
+    messages.innerHTML += `<div class="ai">Gemini: ${reply}</div>`;
+    messages.scrollTop = messages.scrollHeight;
+
+  } catch (err) {
+    messages.innerHTML += `<div class="ai">ERROR: ${err}</div>`;
+  }
+});
+</script>
+
+</body>
+</html>

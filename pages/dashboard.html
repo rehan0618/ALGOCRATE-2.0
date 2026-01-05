@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AlgoCrate Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<!-- JS -->
+<script src="dashboard.js" defer></script>
+</head>
+<body>
+<!-- SIDEBAR -->
+<aside id="sidebar" class="sidebar hidden">
+<h2>Crates</h2>
+<ul>
+<li><a href="dsa.html">📦 DSA Crate</a></li>
+<li><a href="webdev.html">🌐 Web Dev Crate</a></li>
+<li><a href="resume.html">📝 Resume Crate</a></li>
+<li><a href="project.html">💡 Project Crate</a></li>
+<li><a href="crack.html">🚀 Crack Crate</a></li>
+<li><a href="about.html">📖 About AlgoCrate</a></li>
+</ul>
+</aside>
+<!-- MAIN CONTENT -->
+<div class="main-wrapper">
+<!-- HEADER -->
+<header class="header">
+<div class="left">
+<button id="toggleSidebar" class="hamburger">☰</button>
+<span><strong>Home</strong></span>
+</div>
+<img src="default.png" alt="AlgoCrate Logo" class="logo center" />
+<div class="right">
+<span id="userName">User</span>
+<button id="logoutBtn">Logout</button>
+</div>
+</header>
+<main class="dashboard-content">
+<!-- Tagline + Welcome -->
+<div class="container">
+<h1>Welcome to AlgoCrate!</h1>
+<p class="tagline">From "HELLO WORLD" to "HELLO FAANG"</p>
+</div>
+<!-- 3D Carousel -->
+<div class="carousel-wrapper">
+<div class="carousel-3d" id="carousel">
+<div class="carousel-item" style="--i: 0;">DSA</div>
+<div class="carousel-item" style="--i: 1;">WEB-DEV</div>
+<div class="carousel-item" style="--i: 2;">TECH - VAULT</div>
+<div class="carousel-item" style="--i: 3;">ROADMAPS</div>
+<div class="carousel-item" style="--i: 4;">CODE EDITOR</div>
+</div>
+</div>
+<!-- Resource Blocks -->
+<div class="resource-blocks">
+<div class="row">
+<div class="container half">
+<a href="dsacrate.html" class="block">DATA STRUCTURES AND ALGORITHMS</a>
+</div>
+<div class="container half">
+<a href="webdev.html" class="block">WEB - DEVELOPMENT</a>
+</div>
+</div>
+<div class="row">
+<div class="container half">
+<a href="tech-vault.html" class="block">TECH - VAULT</a>
+</div>
+<div class="container half">
+<a href="roadmap.html" class="block">ROADMAPS</a>
+</div>
+</div>
+<div class="row center-half">
+<div class="container full">
+<a href="editor.html" class="block">CODE EDITOR</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+<!-- ASK GEMINI BUTTON -->
+<div id="ask-gemini">Ask Gemini</div>
+
+<!-- GEMINI CHAT -->
+<iframe id="gemini-iframe" src="gemini-widget.html"></iframe>
+
+<style>
+  #ask-gemini {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #6a00ff;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 99999;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  }
+
+  #gemini-iframe {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 360px;
+    height: 500px;
+    border: none;
+    border-radius: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 99998;
+    background: transparent;
+  }
+
+  #gemini-iframe.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+<script>
+  const btn = document.getElementById("ask-gemini");
+  const iframe = document.getElementById("gemini-iframe");
+
+  // preload iframe so first click works
+  iframe.onload = () => {};
+
+  btn.onclick = () => {
+    iframe.classList.toggle("show");
+  };
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AlgoCrate Login</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-welcome-section">
+                 <img src="default.png" alt="AlgoCrate Logo" class="login-logo" />
+       <h1 class="login-welcome">Welcome to AlgoCrate!</h1>
+        </div>
+        <div id="userInfo" class="user-info"></div>
+        <button id="loginBtn" class="google-signin-btn">SIGN IN USING GOOGLE</button>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+    <!-- Firebase JS SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+    <script src="script.js" defer></script>
+
+</body>
+</html>

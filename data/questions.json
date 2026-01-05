@@ -1,0 +1,44 @@
+{
+  "questions": {
+    "q1": {
+      "id": "q1",
+      "title": "Input Output - Print Number Function",
+      "difficulty": "Easy",
+      "points": 100,
+      "description": "Complete the function printNumber which takes an integer input from the user and prints it on the screen.",
+      "usage": [
+        "for C++: cout << variable_name;",
+        "for Java: System.out.print();",
+        "for Python: print()",
+        "for Javascript: console.log()"
+      ],
+      "examples": [
+        {
+          "input": "7",
+          "output": "7",
+          "explanation": "User gives value 7, program prints 7"
+        },
+        {
+          "input": "-5",
+          "output": "-5",
+          "explanation": "User gives value -5, program prints -5"
+        }
+      ],
+      "hints": [
+        "Read integer input from user",
+        "Print the same integer using appropriate output function",
+        "No additional formatting needed"
+      ]
+    },
+    "q2": {
+      "id": "q2",
+      "title": "Sample Question 2",
+      "difficulty": "Medium",
+      "points": 200,
+      "description": "This is a placeholder for question 2.",
+      "usage": ["Sample usage"],
+      "examples": [{"input": "sample", "output": "sample"}],
+      "hints": ["Sample hint"]
+    }
+  }
+}

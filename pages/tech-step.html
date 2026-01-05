@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECH VAULT</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Inter, system-ui, Arial, sans-serif;
+}
+
+body{
+  background:#fff;
+  color:#222;
+  padding:50px 70px;
+}
+
+h1{
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+h3{
+  margin-top:28px;
+  font-size:22px;
+  color:#6a00ff;
+}
+
+p{
+  margin:12px 0 18px;
+  font-size:18px;
+  line-height:1.7;
+  color:#444;
+}
+
+ul{
+  margin:10px 0 22px 22px;
+}
+
+li{
+  margin:8px 0;
+  font-size:18px;
+}
+
+a.link{
+  color:#6a00ff;
+  font-weight:700;
+  text-decoration:none;
+}
+
+a.link:hover{
+  text-decoration:underline;
+}
+
+.back{
+  display:inline-block;
+  margin-top:45px;
+  font-weight:700;
+  color:#6a00ff;
+  text-decoration:none;
+}
+
+.back:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="title"></h1>
+<div id="content"></div>
+
+<a class="back" href="tech-vault.html">← Back to Tech Vault</a>
+
+<script>
+const topic = new URLSearchParams(location.search).get("topic");
+
+const data = {
+
+languages:{
+title:"📚 Coding Languages & Core Fundamentals (Apna College Notes)",
+html:`
+<p>
+These notes cover essential programming languages and fundamental concepts every beginner must know.
+They are from Apna College, a trusted source for learning coding basics.
+</p>
+
+<h3>Why use it?</h3>
+<ul>
+  <li>Build a strong base in programming</li>
+  <li>Understand syntax, variables, loops, functions, and more</li>
+  <li>Prepare yourself for advanced topics easily</li>
+</ul>
+
+<h3>Steps to use</h3>
+<ul>
+  <li>Open the folder link</li>
+  <li>Choose your language or topic</li>
+  <li>Study the notes carefully and practice examples</li>
+  <li>Apply concepts by coding small projects</li>
+</ul>
+
+<p>
+<a class="link" href="https://drive.google.com/drive/folders/1wfNTKinBAV6CCxaI5lfSnnRFAYpy0uEl" target="_blank">
+CLICK HERE
+</a>
+</p>
+`
+},
+
+competitions:{
+title:"🏆 Team Competitions & Hackathon Opportunities (Must Apply)",
+html:`
+<p>
+Participate in team competitions to challenge yourself and win prizes.
+Hackathons sharpen skills and expand your professional network.
+</p>
+
+<h3>Why apply?</h3>
+<ul>
+  <li>Gain real-world experience</li>
+  <li>Work in teams and improve collaboration</li>
+  <li>Showcase skills to recruiters</li>
+</ul>
+
+<h3>How to get started</h3>
+<ul>
+  <li>Pick hackathons suitable for your skill level</li>
+  <li>Form or join a team</li>
+  <li>Prepare, participate, and learn</li>
+</ul>
+
+<p>
+<a class="link" href="https://docs.google.com/document/d/12ZXMjB2RrwWoAFSIk5STFNEgUhclR3krmc-LiO3ksUE/edit" target="_blank">
+CLICK HERE
+</a>
+</p>
+`
+},
+
+hackathonTools:{
+title:"🛠️ Essential Hackathon Tools Stack",
+html:`
+<h3>AI + UI Generation</h3>
+<ul>
+  <li>Lovable – AI-based UI generation</li>
+  <li>V0.dev – Convert Figma to React</li>
+</ul>
+
+<h3>Backend & Database</h3>
+<ul>
+  <li>Supabase – PostgreSQL + Auth</li>
+  <li>LangChain – AI app framework</li>
+</ul>
+
+<h3>Monitoring & Analytics</h3>
+<ul>
+  <li>Highlight – Logs, errors, sessions</li>
+</ul>
+
+<h3>Deployment & Hosting</h3>
+<ul>
+  <li>Vercel – Frontend & serverless</li>
+  <li>Railway – Full-stack deployment</li>
+</ul>
+
+<h3>Documentation</h3>
+<ul>
+  <li>Readme.so – Easy README creation</li>
+</ul>
+`
+},
+
+apiAccess:{
+title:"🔑 API Keys & AI Model Access Platforms",
+html:`
+<h3>Useful platforms</h3>
+<ul>
+  <li>Google AI Studio</li>
+  <li>Groq Cloud</li>
+  <li>OpenRouter</li>
+</ul>
+
+<h3>How to use</h3>
+<ul>
+  <li>Sign up on platforms</li>
+  <li>Generate API keys</li>
+  <li>Store keys securely</li>
+</ul>
+
+<p>
+<a class="link" href="http://aistudio.google.com/" target="_blank">GEMINI</a><br><br>
+<a class="link" href="https://console.groq.com/home" target="_blank">GROQ</a><br><br>
+<a class="link" href="https://openrouter.ai/" target="_blank">OPEN-ROUTER</a>
+</p>
+`
+},
+
+uiux:{
+title:"🎨 UI/UX Design Tools by Google (Stitch)",
+html:`
+<p>
+Google Stitch helps create consistent, responsive UI designs using Google’s ecosystem.
+</p>
+
+<h3>Why use Stitch?</h3>
+<ul>
+  <li>Access Google fonts & icons</li>
+  <li>Create clean, modern interfaces</li>
+</ul>
+
+<h3>How to start</h3>
+<ul>
+  <li>Search “Google Stitch UI tool”</li>
+  <li>Explore Google design resources</li>
+</ul>
+
+<a class="link" href="https://stitch.withgoogle.com" target="_blank">CLICK HERE</a><br><br>
+
+`
+},
+
+corporate:{
+title:"💬 Corporate Acronyms & Workplace Slang for Freshers",
+html:`
+<h3>What it includes</h3>
+<ul>
+  <li>Popular corporate acronyms</li>
+  <li>Common workplace slang</li>
+</ul>
+
+<h3>How to use</h3>
+<ul>
+  <li>Download the list</li>
+  <li>Practice using terms</li>
+</ul>
+
+<p>
+<a class="link" href="https://cosmofeed-blocks-document-bucket.s3-ap-south-1.amazonaws.com/Top-50-Short-forms-or-Acronyms-used-in-corporates-2025-30-09-11-04-11.pdf" target="_blank">
+CLICK HERE
+</a>
+</p>
+`
+},
+
+linkedin:{
+title:"🔗 Complete LinkedIn Profile Optimization Guide",
+html:`
+<h3>What this guide helps with</h3>
+
+<ul>
+  <li>Crafting a strong professional headline</li>
+  <li>Writing an effective summary/About section</li>
+  <li>Showcasing projects and skills properly</li>
+  <li>Optimizing profile for recruiter searches</li>
+  <li>Improving visibility and reach</li>
+</ul>
+
+<h3>How to use</h3>
+<ul>
+  <li>Open the guide link</li>
+  <li>Read each section carefully</li>
+  <li>Apply changes step by step on your profile</li>
+  <li>Update profile regularly with new achievements</li>
+</ul>
+
+<p>
+<a class="link" 
+   href="https://docs.google.com/document/d/1q_NeqJTqKtDcZCBGsjkO5yn6zFGX5GOTIMm4JAPISPw/mobilebasic" 
+   target="_blank">
+CLICK HERE
+</a>
+</p>
+`
+},
+
+
+leetcode:{
+title:"🤖 ChatGPT Prompt to Become Your LeetCode DSA Mentor",
+html:`
+<h3>Prompt</h3>
+  
+  <li>You are my DSA mentor.</li>
+  <li>Do NOT give me the final solution or code.</li>
+  <li>Instead:</li>
+  <li>1. Ask me clarifying questions</li>
+  <li>2. Help me identify the pattern</li>
+  <li>3. Guide me step by step with hints</li>
+  <li>4. Correct my approach if I am wrong</li>
+  <li>5. Only give the final optimized solution if I ask for it</li>
+  <li>Question: "(paste LeetCode problem here)"</li>
+
+
+<h3>How to use</h3>
+<ul>
+  <li>Copy the prompt</li>
+  <li>Paste your LeetCode question</li>
+  <li>Interact step-by-step</li>
+</ul>
+`
+},
+
+opensource:{
+title:"🐙 GitHub Open Source & Open Directory Resources",
+html:`
+<h3>Open Directory Finder</h3>
+<p>
+Explore open directories and useful repositories.
+</p>
+
+<h3>How to use</h3>
+<ul>
+  <li>Browse directories</li>
+  <li>Fork or clone repositories</li>
+  <li>Learn from real projects</li>
+</ul>
+
+<p>
+<a class="link" href="https://ewasion.github.io/opendirectory-finder/" target="_blank">
+CLICK HERE
+</a>
+</p>
+`
+},
+
+spline:{
+title:"🎨 Spline – Drag & Drop 3D Animated Graphics",
+html:`
+<p>
+Spline allows you to create interactive 3D graphics without coding.
+</p>
+
+<h3>How to start</h3>
+<ul>
+  <li>Use drag & drop editor</li>
+  <li>Create 3D scenes</li>
+  <li>Embed directly into websites</li>
+</ul>
+
+<p>
+<a class="link" href="https://spline.design/" target="_blank">
+CLICK HERE
+</a>
+</p>
+`
+}
+
+};
+
+const d = data[topic] || data.languages;
+document.getElementById("title").innerText = d.title;
+document.getElementById("content").innerHTML = d.html;
+</script>
+
+</body>
+</html>

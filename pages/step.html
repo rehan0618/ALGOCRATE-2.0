@@ -1,0 +1,221 @@
+<!-- =========================
+     step.html
+     ========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSA STEP</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Inter, "Google Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+body{
+  background:#ffffff;
+  color:#1f1f1f;
+  padding:60px 80px;
+  font-size:18px;
+  line-height:1.75;
+}
+
+/* MAIN HEADING */
+h1{
+  font-size:40px;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+/* SUBTITLE */
+#subtitle{
+  font-size:20px;
+  color:#555;
+  margin-bottom:25px;
+}
+
+/* SECTION HEADINGS */
+h3{
+  margin-top:32px;
+  font-size:24px;
+  font-weight:700;
+  color:#1f9d55;
+}
+
+/* PARAGRAPHS */
+p{
+  margin:14px 0 22px;
+  font-size:19px;
+  color:#333;
+}
+
+/* LINKS */
+a{
+  color:#6a00ff;
+  font-weight:600;
+  font-size:18px;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+/* LISTS */
+ul{
+  margin:18px 0 34px 24px;
+}
+
+li{
+  margin:10px 0;
+  font-size:19px;
+}
+
+/* BACK LINK */
+.back{
+  display:inline-block;
+  margin-top:50px;
+  font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="title"></h1>
+<p id="subtitle"></p>
+
+<div id="content"></div>
+
+<a class="back" href="dsacrate.html">← Back to DSA Crate</a>
+
+<script>
+const t = new URLSearchParams(location.search).get("topic");
+
+const data = {
+
+step1:{
+title:"STEP-1 : GETTING STARTED WITH A LANGUAGE",
+sub:"LANGUAGES – C++ / JAVA / PYTHON",
+html:`
+<p>
+Before diving into Data Structures and Algorithms (DSA), it is important to first build a strong foundation in one programming language. This step focuses on helping you choose and learn a language properly through high-quality, beginner-friendly resources.
+</p>
+<p>
+You can start with C++, Java, or Python based on your preference. Each language is provided with carefully selected one-shot videos or complete playlists, available in both English and Hindi. Do not rush—focus on understanding syntax, basic logic, and problem-solving concepts.
+</p>
+
+<h3>C++ BEST RESOURCE ONE SHOT</h3>
+<a href="https://youtu.be/-TkoO8Z07hI" target="_blank">ENGLISH VERSION</a><br>
+<a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA" target="_blank">HINDI VERSION</a>
+
+<h3>COMPLETE JAVA BEST RESOURCE PLAYLIST</h3>
+<a href="https://youtu.be/xTtL8E4LzTQ" target="_blank">ENGLISH VERSION</a><br>
+<a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q" target="_blank">HINDI VERSION</a>
+
+<h3>PYTHON BEST RESOURCE ONE SHOT</h3>
+<a href="https://youtu.be/ix9cRaBkVe0" target="_blank">ENGLISH VERSION</a><br>
+<a href="https://www.youtube.com/playlist?list=PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0" target="_blank">HINDI VERSION</a>
+`
+},
+
+step2:{
+title:"STEP-2 : LOGIC BUILDING PHASE",
+sub:"PRACTICE & THINKING SKILLS",
+html:`
+<p>
+After completing Step-1, the next crucial phase is logic building. This step focuses on strengthening your problem-solving ability through consistent practice.
+</p>
+<p>
+Platforms like GeeksforGeeks, LeetCode, and W3Schools help improve logical thinking and coding confidence. Along with practice, understanding Time Complexity and Space Complexity is essential for writing optimized code.
+</p>
+
+<h3>PRACTICE PLATFORMS</h3>
+<a href="https://www.geeksforgeeks.org/explore" target="_blank">GEEKS FOR GEEKS</a><br>
+<a href="https://leetcode.com/problemset/" target="_blank">LEETCODE</a><br>
+<a href="https://www.w3schools.com/cpp/default.asp" target="_blank">W3SCHOOLS</a>
+
+<h3>EFFICIENCY DEVELOPMENT</h3>
+<a href="https://youtu.be/PwKv8fOcriM" target="_blank">TIME & SPACE COMPLEXITY</a>
+`
+},
+
+step3:{
+title:"STEP-3 : FUNDAMENTALS OF DSA",
+sub:"CORE DATA STRUCTURES & ALGORITHMS",
+html:`
+<p>
+This step marks the beginning of your core DSA journey. You will learn essential data structures and algorithms in a procedural and structured manner.
+</p>
+<p>
+Topics start from Arrays and Strings and progress to advanced concepts like Trees, Graphs, Dynamic Programming, and Greedy Algorithms. Techniques like Sliding Window and Two Pointer methods improve efficiency.
+</p>
+
+<ul>
+<li>ARRAYS</li>
+<li>STRINGS</li>
+<li>RECURSION</li>
+<li>STACK & QUEUE</li>
+<li>LINKED LISTS</li>
+<li>HASHING</li>
+<li>TREES & GRAPHS</li>
+<li>DYNAMIC PROGRAMMING</li>
+<li>GREEDY & BACKTRACKING</li>
+</ul>
+
+<h3>C++ DSA PLAYLISTS</h3>
+<a href="https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz" target="_blank">ENGLISH</a><br>
+<a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt" target="_blank">HINDI</a>
+
+<h3>JAVA DSA PLAYLIST</h3>
+<a href="https://www.youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop" target="_blank">HINDI</a>
+`
+},
+
+cpp:{
+title:"COMPETITIVE CODING IN C++",
+sub:"WATCH THIS BEFORE STARTING YOUR CP JOURNEY",
+html:`
+<p>
+Competitive Programming (CP) is a skill that helps you think fast, write efficient code, and solve complex problems under time constraints.
+</p>
+<p>
+This page guides you step-by-step from beginner practice to real competitive environments and interview-level preparation.
+</p>
+
+<a href="https://youtu.be/kE5QWhrNjqY" target="_blank">CLICK HERE</a>
+
+<div style="margin:24px 0; text-align:left;">
+  <img 
+    src="kE5QWhrNjqY-HD.jpg"
+    alt="Competitive Coding"
+    style="max-width:32%; width:100%; border-radius:10px;"
+  />
+</div>
+
+<ul>
+<li>STEP-1 : START WITH PRACTICE PLATFORM</li>
+<li>STEP-2 : ENTER BEGINNER CONTESTS</li>
+<li>STEP-3 : REAL COMPETITIVE LEVEL</li>
+<li>STEP-4 : INTERVIEW PRACTICE</li>
+</ul>
+`
+}
+
+};
+
+const d = data[t] || data.step1;
+document.getElementById("title").innerText = d.title;
+document.getElementById("subtitle").innerText = d.sub;
+document.getElementById("content").innerHTML = d.html;
+</script>
+
+</body>
+</html>

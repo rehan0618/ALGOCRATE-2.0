@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AlgoCrate Home</title>
+  <link rel="stylesheet" href="../css/style.css" />
+
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+  <!-- Main Firebase/Auth Script -->
+  <script defer src="../js/dashboard.js"></script>
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="left">
+      <span id="toggleSidebar" class="hamburger">☰</span>
+      HOME
+    </div>
+    <img src="../images/default.png" alt="AlgoCrate Logo" class="logo center" />
+
+    <div class="right">
+      <div id="userName"></div>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar hidden">
+    <ul>
+      <li>📦 DSA Crate</li>
+      <li>🌐 WebD Crate</li>
+      <li>🧠 AI/ML Crate</li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Welcome to AlgoCrate!</h1>
+    <p>Your learning dashboard will go here.</p>
+  </main>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.getElementById("toggleSidebar");
+      const sidebar = document.getElementById("sidebar");
+
+      toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("hidden");
+      });
+    });
+  </script>
+</body>
+</html>

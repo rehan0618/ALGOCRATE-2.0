@@ -1,0 +1,780 @@
+// COMPLETE DSA ROADMAP WITH DETAILED PROBLEM INFORMATION
+
+const stepTitles = {
+  step1: "Step 1: Learn the basics",
+  step2: "Step 2: Learn Important Sorting Techniques",
+  step3: "Step 3: Solve Problems on Arrays [Easy → Medium → Hard]",
+  step4: "Step 4: Binary Search [1D, 2D Arrays, Search Space]",
+  step5: "Step 5: Strings [Basic and Medium]",
+  step6: "Step 6: Learn LinkedList [Single LL, Double LL, Medium, Hard Problems]",
+  step7: "Step 7: Recursion [PatternWise]",
+  step8: "Step 8: Bit Manipulation [Concepts & Problems]",
+  step9: "Step 9: Stack and Queues [Learning, Pre-In-Post-fix, Monotonic Stack, Implementation]",
+  step10: "Step 10: Sliding Window & Two Pointer Combined Problems",
+  step11: "Step 11: Heaps [Learning, Medium, Hard Problems]",
+  step12: "Step 12: Greedy Algorithms [Easy, Medium/Hard]",
+  step13: "Step 13: Binary Trees [Traversals, Medium and Hard Problems]",
+  step14: "Step 14: Binary Search Trees [Concept and Problems]",
+  step15: "Step 15: Graphs [Concepts & Problems]",
+  step16: "Step 16: Dynamic Programming [Patterns and Problems]",
+  step17: "Step 17: Tries",
+  step18: "Step 18: Strings (Advanced / Specialized)"
+};
+
+const lectureData = {
+  step1: [
+    {
+      lectureTitle: "Lec 1: Things to Know in C++/Java/Python or any language",
+      problems: [
+        {
+          title: "User Input / Output",
+          solve: "https://bit.ly/3y7uIvl",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/c/c-basic-input-output/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn how to take input from users and display output in your programming language."
+        },
+        {
+          title: "Data Types",
+          solve: "https://bit.ly/32W5vu5",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/c/data-types-in-c/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Understand different data types (int, float, char, etc.) and their ranges in your programming language."
+        },
+        {
+          title: "If Else Statements",
+          solve: "https://bit.ly/3pHmnh4",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/c/c-if-else-statement/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Master conditional statements and decision making using if-else constructs."
+        },
+        {
+          title: "Switch Statement",
+          solve: "https://bit.ly/3dSMjeZ",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/c/switch-case-statement/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn switch case statements for handling multiple conditions efficiently."
+        },
+        {
+          title: "What are arrays, strings?",
+          solve: "https://bit.ly/3dQFLgd",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/data-structure/what-is-an-array/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Understand the fundamental concepts of arrays and strings data structures."
+        },
+        {
+          title: "For loops",
+          solve: "https://bit.ly/3QOLHma",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/c/c-for-loop/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Master iterative statements using for loops for repetitive tasks."
+        },
+        {
+          title: "While loops",
+          solve: "https://bit.ly/3yQ9ysF",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/c/while-loop-in-c/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn while loops for conditional iterations and repetitive operations."
+        },
+        {
+          title: "Functions (Pass by Reference and Value)",
+          solve: "https://bit.ly/3QGQOhZ",
+          video: "https://youtu.be/FcxTERRsP9g",
+          article: "https://takeuforward.org/c/functions-in-c/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Understand functions, parameters, and the difference between pass by value and reference."
+        },
+        {
+          title: "Time Complexity [Learn Basics, and then analyse in next Steps]",
+          solve: "https://bit.ly/3uPPUPZ",
+          video: "https://youtu.be/FjsSzGQ6Njs",
+          article: "https://takeuforward.org/time-complexity/introduction-to-time-complexity/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn basic time complexity analysis - Big O notation and algorithm efficiency."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 2: Build-up Logical Thinking",
+      problems: [
+        {
+          title: "Patterns",
+          solve: "https://bit.ly/3tBOaRA",
+          video: "https://youtu.be/tNm_NNSB3_w",
+          article: "https://takeuforward.org/pattern/pattern-problems/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Practice various pattern printing problems to build logical thinking and nested loop concepts."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 3: Learn STL/Java-Collections or similar thing in your language",
+      problems: [
+        {
+          title: "C++ STL",
+          solve: "https://bit.ly/3y5QQKf",
+          video: "https://youtu.be/RRVYpIET_RU",
+          article: "https://takeuforward.org/c/c-stl-tutorial/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Master C++ Standard Template Library including vectors, maps, sets, and algorithms."
+        },
+        {
+          title: "Java Collections",
+          solve: "https://bit.ly/3dOEGgp",
+          video: "https://youtu.be/RRVYpIET_RU",
+          article: "https://takeuforward.org/java/java-collections-framework/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn Java Collections Framework including ArrayList, HashMap, HashSet, and utility methods."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 4: Know Basic Maths",
+      problems: [
+        {
+          title: "Count Digits",
+          solve: "https://bit.ly/3y5lZu7",
+          video: "https://youtu.be/1xNbjMdbjug",
+          article: "https://takeuforward.org/data-structure/count-digits/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn to count the number of digits in a given number using mathematical operations."
+        },
+        {
+          title: "Reverse a Number",
+          solve: "https://bit.ly/3Q3o2g6",
+          video: "https://youtu.be/1xNbjMdbjug",
+          article: "https://takeuforward.org/c/c-program-to-reverse-a-number/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Implement algorithm to reverse digits of a number using mathematical approach."
+        },
+        {
+          title: "Check Palindrome",
+          solve: "https://bit.ly/3Q2q7XJ",
+          video: "https://youtu.be/1xNbjMdbjug",
+          article: "https://takeuforward.org/data-structure/check-if-a-number-is-palindrome-or-not/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Determine if a number reads the same forwards and backwards."
+        },
+        {
+          title: "GCD Or HCF",
+          solve: "https://bit.ly/3PZQOGs",
+          video: "https://youtu.be/1xNbjMdbjug",
+          article: "https://takeuforward.org/data-structure/find-gcd-of-two-numbers/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Find Greatest Common Divisor using Euclidean algorithm and understand its applications."
+        },
+        {
+          title: "Armstrong Numbers",
+          solve: "https://bit.ly/3dKLbQF",
+          video: "https://youtu.be/1xNbjMdbjug",
+          article: "https://takeuforward.org/maths/check-if-a-number-is-armstrong-number-or-not/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Check if a number equals the sum of its digits raised to the power of number of digits."
+        },
+        {
+          title: "Print all Divisors",
+          solve: "https://bit.ly/3Q4rjfx",
+          video: "https://youtu.be/1xNbjMdbjug",
+          article: "https://takeuforward.org/data-structure/print-all-divisors-of-a-given-number/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Find and print all divisors of a given number efficiently in O(√n) time."
+        },
+        {
+          title: "Check for Prime",
+          solve: "https://bit.ly/3QNLjsa",
+          video: "https://youtu.be/1xNbjMdbjug",
+          article: "https://takeuforward.org/data-structure/check-if-a-number-is-prime-or-not/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Implement efficient prime checking algorithm and understand primality testing."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 5: Learn Basic Recursion",
+      problems: [
+        {
+          title: "Understand recursion by print something N times",
+          solve: "https://bit.ly/3y6mIr4",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/introduction-to-recursion/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn the basics of recursion by implementing a simple function that prints something N times."
+        },
+        {
+          title: "Print name N times using recursion",
+          solve: "https://bit.ly/3OkdKKZ",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/print-name-n-times-using-recursion/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Practice recursion by printing your name or any string N times using recursive calls."
+        },
+        {
+          title: "Print 1 to N using recursion",
+          solve: "https://bit.ly/3Q5ZSM5",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/print-1-to-n-using-recursion/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Implement recursive function to print numbers from 1 to N."
+        },
+        {
+          title: "Print N to 1 using recursion",
+          solve: "https://bit.ly/3y4bAqF",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/print-n-to-1-using-recursion/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Create recursive function to print numbers from N down to 1."
+        },
+        {
+          title: "Sum of first N numbers",
+          solve: "https://bit.ly/3QOKJ4p",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/sum-of-first-n-natural-numbers/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Calculate sum of first N natural numbers using recursive approach."
+        },
+        {
+          title: "Factorial of N numbers",
+          solve: "https://bit.ly/3OjYjLF",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/factorial-of-n/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Implement factorial calculation using recursion and understand the mathematical concept."
+        },
+        {
+          title: "Reverse an array",
+          solve: "https://bit.ly/3Ok8jQC",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/reverse-an-array/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Reverse array elements using recursive approach with two pointers technique."
+        },
+        {
+          title: "Check if a string is palindrome or not",
+          solve: "https://bit.ly/3qL4jJy",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/check-if-the-given-string-is-palindrome-or-not/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Determine if a string is palindrome using recursive string comparison."
+        },
+        {
+          title: "Fibonacci Number",
+          solve: "https://leetcode.com/problems/fibonacci-number/",
+          video: "https://youtu.be/yVdKa8dnKiE",
+          article: "https://takeuforward.org/recursion/fibonacci-series-up-to-nth-term/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Generate Fibonacci sequence using recursion and understand the recurrence relation."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 6: Learn Basic Hashing",
+      problems: [
+        {
+          title: "Hashing Theory",
+          solve: "https://bit.ly/3y7SzS3",
+          video: "https://youtu.be/KEs5UyBJ39g",
+          article: "https://takeuforward.org/hashing/hashing-introduction/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Learn fundamental concepts of hashing, hash functions, and hash tables."
+        },
+        {
+          title: "Counting frequencies of array elements",
+          solve: "https://bit.ly/3y5oqal",
+          video: "https://youtu.be/KEs5UyBJ39g",
+          article: "https://takeuforward.org/hashing/counting-frequencies-of-array-elements/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Count frequency of each element in array using hash maps/hash tables."
+        },
+        {
+          title: "Find the highest/lowest frequency element",
+          solve: "https://bit.ly/3OaFhtP",
+          video: "https://youtu.be/KEs5UyBJ39g",
+          article: "https://takeuforward.org/arrays/find-the-highest-lowest-frequency-element/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Find elements with maximum and minimum frequency in an array using hashing."
+        }
+      ]
+    }
+  ],
+
+  step7: [
+    {
+      lectureTitle: "Lec 1: Get a Strong Hold",
+      problems: [
+        {
+          title: "Recursive Implementation of atoi()",
+          solve: "https://leetcode.com/problems/string-to-integer-atoi/",
+          video: "https://youtu.be/1atP3TUuUjs",
+          article: "https://takeuforward.org/recursion/recursive-implementation-of-atoi/",
+          difficulty: "Hard",
+          platform: "LeetCode",
+          description: "Implement string to integer conversion using recursive approach with edge cases."
+        },
+        {
+          title: "Pow(x, n)",
+          solve: "https://leetcode.com/problems/powx-n/",
+          video: "https://youtu.be/l0YC3876qxg",
+          article: "https://takeuforward.org/data-structure/implement-powxn-x-raised-to-the-power-n/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Calculate x raised to power n efficiently using binary exponentiation."
+        },
+        {
+          title: "Count Good numbers",
+          solve: "https://leetcode.com/problems/count-good-numbers/",
+          video: "https://youtu.be/aB6h5cqw_6A",
+          article: "https://takeuforward.org/recursion/count-good-numbers/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Count good digit strings using modular exponentiation and recursion."
+        },
+        {
+          title: "Sort a stack using recursion",
+          solve: "https://bit.ly/3QLn3MX",
+          video: "https://youtu.be/WLvU5EQVZqY",
+          article: "https://takeuforward.org/recursion/sort-a-stack-using-recursion/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Sort stack elements using only recursion without extra data structures."
+        },
+        {
+          title: "Reverse a stack using recursion",
+          solve: "https://bit.ly/3QOLHma",
+          video: "https://youtu.be/cQABSMBF9ow",
+          article: "https://takeuforward.org/recursion/reverse-a-stack-using-recursion/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Reverse stack elements using recursion without using extra space."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 2: Subsequences Pattern",
+      problems: [
+        {
+          title: "Generate all binary strings",
+          solve: "https://bit.ly/3yE1zBV",
+          video: "https://youtu.be/Ep5DFzXXJEY",
+          article: "https://takeuforward.org/recursion/generate-all-binary-strings/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Generate all binary strings of length N using recursive backtracking."
+        },
+        {
+          title: "Generate Parenthesis",
+          solve: "https://leetcode.com/problems/generate-parentheses/",
+          video: "https://youtu.be/eyCj_u3PoJE",
+          article: "https://takeuforward.org/recursion/generate-parentheses/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Generate all valid parentheses combinations using recursive approach."
+        },
+        {
+          title: "Print all subsequences/Power Set",
+          solve: "https://leetcode.com/problems/subsets/",
+          video: "https://youtu.be/b7AYbpM5YrE",
+          article: "https://takeuforward.org/data-structure/power-set-print-all-the-possible-subsequences-of-the-string/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Generate all possible subsequences of array using recursion and backtracking."
+        },
+        {
+          title: "Learn All Patterns of Subsequences (Theory)",
+          solve: "#",
+          video: "https://youtu.be/AxNNVECce8c",
+          article: "https://takeuforward.org/recursion/subsequences-pattern-theory/",
+          difficulty: "Medium",
+          platform: "Theory",
+          description: "Understand different patterns for generating subsequences using recursion."
+        },
+        {
+          title: "Count all subsequences with sum K",
+          solve: "https://bit.ly/3pPNjdW",
+          video: "https://youtu.be/AxNNVECce8c",
+          article: "https://takeuforward.org/recursion/count-subsequences-with-sum-k/",
+          difficulty: "Hard",
+          platform: "Coding Ninjas",
+          description: "Count number of subsequences having sum equal to K using recursion."
+        },
+        {
+          title: "Check if there exists a subsequence with sum K",
+          solve: "https://bit.ly/3QLn3MX",
+          video: "https://youtu.be/AxNNVECce8c",
+          article: "https://takeuforward.org/recursion/check-if-there-exists-a-subsequence-with-sum-k/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Check existence of subsequence with given sum using recursive approach."
+        },
+        {
+          title: "Combination Sum",
+          solve: "https://leetcode.com/problems/combination-sum/",
+          video: "https://youtu.be/OyZFFqQtu98",
+          article: "https://takeuforward.org/data-structure/combination-sum-1/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Find all unique combinations that sum to target with repetition allowed."
+        },
+        {
+          title: "Combination Sum-II",
+          solve: "https://leetcode.com/problems/combination-sum-ii/",
+          video: "https://youtu.be/G1fRTGRxXU8",
+          article: "https://takeuforward.org/data-structure/combination-sum-ii-find-all-unique-combinations/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Find combinations that sum to target without repetition and duplicates."
+        },
+        {
+          title: "Subset Sum-I",
+          solve: "https://leetcode.com/problems/subsets/",
+          video: "https://youtu.be/rTsHAHBEP9k",
+          article: "https://takeuforward.org/data-structure/subset-sum-equal-to-k/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Generate all possible subsets without considering duplicates."
+        },
+        {
+          title: "Subset Sum-II",
+          solve: "https://leetcode.com/problems/subsets-ii/",
+          video: "https://youtu.be/Vn2v6ajA7U0",
+          article: "https://takeuforward.org/recursion/subset-ii-print-all-the-unique-subsets/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Generate unique subsets from array containing duplicates."
+        },
+        {
+          title: "Combination Sum - III",
+          solve: "https://leetcode.com/problems/combination-sum-iii/",
+          video: "https://youtu.be/HyozOZKlJaM",
+          article: "https://takeuforward.org/recursion/combination-sum-iii/",
+          difficulty: "Hard",
+          platform: "LeetCode",
+          description: "Find combinations of K numbers that sum to N using digits 1-9."
+        },
+        {
+          title: "Letter Combinations of a Phone number",
+          solve: "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+          video: "https://youtu.be/0snEunUacZY",
+          article: "https://takeuforward.org/data-structure/letter-combinations-of-a-phone-number/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Generate all possible letter combinations from phone number digits."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 3: Trying out all Combos / Hard",
+      problems: [
+        {
+          title: "Palindrome Partitioning",
+          solve: "https://leetcode.com/problems/palindrome-partitioning/",
+          video: "https://youtu.be/WBgsAboClE0",
+          article: "https://takeuforward.org/data-structure/palindrome-partitioning/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Partition string such that every substring is a palindrome using backtracking."
+        },
+        {
+          title: "Word Search",
+          solve: "https://leetcode,
+
+  step2: [
+    {
+      lectureTitle: "Lec 1: Sorting-I",
+      problems: [
+        {
+          title: "Selection Sort",
+          solve: "https://bit.ly/3ppFh4P",
+          video: "https://youtu.be/HGk_ypEuS24",
+          article: "https://takeuforward.org/sorting/selection-sort-algorithm/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Implement selection sort algorithm by repeatedly finding minimum element and placing it at beginning."
+        },
+        {
+          title: "Bubble Sort",
+          solve: "https://bit.ly/3ppIUtq",
+          video: "https://youtu.be/HGk_ypEuS24",
+          article: "https://takeuforward.org/data-structure/bubble-sort-algorithm/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Learn bubble sort by repeatedly swapping adjacent elements if they are in wrong order."
+        },
+        {
+          title: "Insertion Sort",
+          solve: "https://bit.ly/3doBcPV",
+          video: "https://youtu.be/HGk_ypEuS24",
+          article: "https://takeuforward.org/data-structure/insertion-sort-algorithm/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Master insertion sort by building sorted array one element at a time."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 2: Sorting-II",
+      problems: [
+        {
+          title: "Merge Sort",
+          solve: "https://bit.ly/3A4Ap5u",
+          video: "https://youtu.be/ogjf7ORKfd8",
+          article: "https://takeuforward.org/data-structure/merge-sort-algorithm/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Implement divide and conquer merge sort algorithm with O(nlogn) time complexity."
+        },
+        {
+          title: "Recursive Bubble Sort",
+          solve: "https://bit.ly/3doBrGx",
+          video: "https://youtu.be/ogjf7ORKfd8",
+          article: "https://takeuforward.org/recursion/recursive-bubble-sort-algorithm/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Implement bubble sort using recursive approach instead of iterative loops."
+        },
+        {
+          title: "Recursive Insertion Sort",
+          solve: "https://bit.ly/3dn26c4",
+          video: "https://youtu.be/ogjf7ORKfd8",
+          article: "https://takeuforward.org/recursion/recursive-insertion-sort-algorithm/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Implement insertion sort algorithm using recursion."
+        },
+        {
+          title: "Quick Sort",
+          solve: "https://bit.ly/3A6qbcd",
+          video: "https://youtu.be/WIrA4YexLRQ",
+          article: "https://takeuforward.org/data-structure/quick-sort-algorithm/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Master quick sort algorithm using divide and conquer with partitioning."
+        }
+      ]
+    }
+  ],
+
+  step3: [
+    {
+      lectureTitle: "Lec 1: Easy",
+      problems: [
+        {
+          title: "Largest Element in an Array",
+          solve: "https://bit.ly/3y5YSKt",
+          video: "https://youtu.be/37E9ckMDdTk",
+          article: "https://takeuforward.org/data-structure/find-the-largest-element-in-an-array/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Find the largest element in an array by traversing through all elements."
+        },
+        {
+          title: "Second Largest Element in an Array without sorting",
+          solve: "https://bit.ly/3pPlukE",
+          video: "https://youtu.be/37E9ckMDdTk",
+          article: "https://takeuforward.org/data-structure/find-second-smallest-and-second-largest-element-in-an-array/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Find second largest element efficiently in single pass without sorting."
+        },
+        {
+          title: "Check if the array is sorted",
+          solve: "https://bit.ly/3y5QKfk",
+          video: "https://youtu.be/37E9ckMDdTk",
+          article: "https://takeuforward.org/data-structure/check-if-an-array-is-sorted/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Check if array elements are arranged in non-decreasing order."
+        },
+        {
+          title: "Remove duplicates from Sorted array",
+          solve: "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+          video: "https://youtu.be/37E9ckMDdTk",
+          article: "https://takeuforward.org/data-structure/remove-duplicates-in-place-from-sorted-array/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Remove duplicate elements from sorted array in-place using two pointers."
+        },
+        {
+          title: "Left Rotate an array by one place",
+          solve: "https://bit.ly/3y5lZu8",
+          video: "https://youtu.be/wvcQg43_V8U",
+          article: "https://takeuforward.org/data-structure/left-rotate-the-array-by-one/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Rotate array elements to the left by one position."
+        },
+        {
+          title: "Left rotate an array by D places",
+          solve: "https://leetcode.com/problems/rotate-array/",
+          video: "https://youtu.be/wvcQg43_V8U",
+          article: "https://takeuforward.org/data-structure/rotate-array-by-k-elements/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Rotate array elements to the left by D positions using reversal algorithm."
+        },
+        {
+          title: "Move Zeros to end",
+          solve: "https://leetcode.com/problems/move-zeroes/",
+          video: "https://youtu.be/wvcQg43_V8U",
+          article: "https://takeuforward.org/data-structure/move-all-zeros-to-the-end-of-the-array/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Move all zero elements to end while maintaining relative order of non-zero elements."
+        },
+        {
+          title: "Linear Search",
+          solve: "https://bit.ly/3y5LJh5",
+          video: "https://youtu.be/wvcQg43_V8U",
+          article: "https://takeuforward.org/data-structure/linear-search-in-c/",
+          difficulty: "Easy",
+          platform: "Coding Ninjas",
+          description: "Search for an element in array by checking each element sequentially."
+        },
+        {
+          title: "Find the Union",
+          solve: "https://bit.ly/3OgryrV",
+          video: "https://youtu.be/wvcQg43_V8U",
+          article: "https://takeuforward.org/data-structure/union-of-two-sorted-arrays/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Find union of two sorted arrays without duplicate elements."
+        },
+        {
+          title: "Find missing number in an array",
+          solve: "https://leetcode.com/problems/missing-number/",
+          video: "https://youtu.be/bYWLJb3vCWY",
+          article: "https://takeuforward.org/arrays/find-the-missing-number-in-an-array/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Find the missing number in array containing n distinct numbers taken from 0 to n."
+        },
+        {
+          title: "Maximum Consecutive Ones",
+          solve: "https://leetcode.com/problems/max-consecutive-ones/",
+          video: "https://youtu.be/bYWLJb3vCWY",
+          article: "https://takeuforward.org/data-structure/count-maximum-consecutive-ones-in-the-array/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Find maximum number of consecutive 1s in a binary array."
+        },
+        {
+          title: "Find the number that appears once, and other numbers twice",
+          solve: "https://leetcode.com/problems/single-number/",
+          video: "https://youtu.be/bYWLJb3vCWY",
+          article: "https://takeuforward.org/arrays/find-the-number-that-appears-once-and-the-other-numbers-twice/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Find unique element in array where every other element appears exactly twice using XOR."
+        },
+        {
+          title: "Longest subarray with given sum K(positives)",
+          solve: "https://bit.ly/3OgDPJm",
+          video: "https://youtu.be/frf7qxiN2qU",
+          article: "https://takeuforward.org/data-structure/longest-subarray-with-given-sum-k/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Find longest subarray with sum equal to K in array of positive numbers using sliding window."
+        },
+        {
+          title: "Longest subarray with sum K (Positives + Negatives)",
+          solve: "https://bit.ly/3OjYjLF",
+          video: "https://youtu.be/frf7qxiN2qU",
+          article: "https://takeuforward.org/arrays/longest-subarray-with-sum-k-postives-and-negatives/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Find longest subarray with sum K in array containing positive and negative numbers using hashing."
+        }
+      ]
+    },
+    {
+      lectureTitle: "Lec 2: Medium",
+      problems: [
+        {
+          title: "2Sum Problem",
+          solve: "https://leetcode.com/problems/two-sum/",
+          video: "https://youtu.be/UXDSeD9mN-k",
+          article: "https://takeuforward.org/data-structure/two-sum-check-if-a-pair-with-given-sum-exists-in-array/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Find two numbers in array that add up to specific target using hash map."
+        },
+        {
+          title: "Sort an array of 0's 1's and 2's",
+          solve: "https://leetcode.com/problems/sort-colors/",
+          video: "https://youtu.be/tp8JIuCXBaU",
+          article: "https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/",
+          difficulty: "Medium",
+          platform: "LeetCode",
+          description: "Sort array containing only 0s, 1s, and 2s using Dutch National Flag algorithm."
+        },
+        {
+          title: "Majority Element (>n/2 times)",
+          solve: "https://leetcode.com/problems/majority-element/",
+          video: "https://youtu.be/nP_ns3uSh80",
+          article: "https://takeuforward.org/data-structure/find-the-majority-element-that-occurs-more-than-n-2-times/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Find element that appears more than n/2 times using Moore's Voting Algorithm."
+        },
+        {
+          title: "Kadane's Algorithm, maximum subarray sum",
+          solve: "https://leetcode.com/problems/maximum-subarray/",
+          video: "https://youtu.be/w_KEocd__20",
+          article: "https://takeuforward.org/data-structure/kadanes-algorithm-maximum-subarray-sum-in-an-array/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Find maximum sum of contiguous subarray using Kadane's algorithm."
+        },
+        {
+          title: "Print subarray with maximum subarray sum (extended version of above problem)",
+          solve: "https://bit.ly/3OlWfAC",
+          video: "https://youtu.be/w_KEocd__20",
+          article: "https://takeuforward.org/data-structure/print-the-subarray-with-maximum-sum-kadanes-algorithm/",
+          difficulty: "Medium",
+          platform: "Coding Ninjas",
+          description: "Print the actual subarray that gives maximum sum using modified Kadane's algorithm."
+        },
+        {
+          title: "Stock Buy and Sell",
+          solve: "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+          video: "https://youtu.be/eMSfBgbiEjk",
+          article: "https://takeuforward.org/data-structure/stock-buy-and-sell/",
+          difficulty: "Easy",
+          platform: "LeetCode",
+          description: "Find maximum profit from buying and selling stock once by tracking minimum price
